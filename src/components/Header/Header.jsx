@@ -1,11 +1,7 @@
-import './Header.css'
+import "./Header.css"
 
 const Header = () => {
-	return (
-		<div>
-			Logo
-		</div>
-	);
-};
+  return <img src="/logo.svg" alt="Логотип журнала" className="logo"/>
+}
 
-export default Header;
+export default Header
