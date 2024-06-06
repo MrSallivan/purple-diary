@@ -2,6 +2,8 @@ import "./App.css"
 import Button from "./components/Button/Button"
 import CardButton from "./components/CardButton/CardButton"
 import JournalItem from "./components/JournalItem/JournalItem"
+import LeftPanel from "./layouts/LeftPanel/leftPanel"
+import Body from "./layouts/Body/Body"
 
 function App() {
   const data = [
@@ -23,10 +25,12 @@ function App() {
   ]
 
   return (
-    <>
+    <div className="app">
+      <LeftPanel></LeftPanel>
+      <Body></Body>
       <h1>Caption</h1>
       <p>Same text</p>
-    <CardButton>Новое воспоминание</CardButton>
+      <CardButton>Новое воспоминание</CardButton>
       <CardButton>
         <JournalItem
           title={data[0].title}
@@ -48,7 +52,8 @@ function App() {
           text={data[2].text}
         />
       </CardButton>
-    </>
+      <Button />
+    </div>
   )
 }
 
