@@ -2,8 +2,6 @@ import CardButton from "../CardButton/CardButton"
 import "./JournalAddButton.css"
 
 function JournalAddButton() {
-  return <CardButton>
-		Новое воспоминание
-	</CardButton>
+  return <CardButton className="journal-add">Новое воспоминание</CardButton>
 }
 export default JournalAddButton
