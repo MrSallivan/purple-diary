@@ -1,3 +1,4 @@
+import { useState } from "react"
 import "./App.css"
 // import Button from "./components/Button/Button"
 import CardButton from "./components/CardButton/CardButton"
@@ -9,6 +10,7 @@ import JournalList from "./components/JournalList/JournalList"
 import JornalAddButton from "./components/JournalAddButton/JournalAddButton"
 
 function App() {
+  const [inputData, setInputData] = useState('')
   const data = [
     {
       title: "Подготовка к обновлению курсов",
@@ -26,12 +28,14 @@ function App() {
       date: new Date()
     }
   ]
-
+  const inputChange = (e) => {
+    setInputData(e.target.value)
+  }
   return (
     <div className="app">
       <LeftPanel>
         <Header />
-        <JornalAddButton/>
+        <JornalAddButton />
         <JournalList>
           <CardButton>
             <JournalItem
@@ -56,7 +60,9 @@ function App() {
           </CardButton>
         </JournalList>
       </LeftPanel>
-      <Body>Body</Body>
+      <Body>
+        <input type="text" value={inputData} onChange={inputChange} />
+      </Body>
     </div>
   )
 }
