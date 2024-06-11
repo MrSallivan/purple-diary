@@ -1,16 +1,15 @@
-import { useState } from "react"
+// import { useState } from "react"
 import "./App.css"
-// import Button from "./components/Button/Button"
 import CardButton from "./components/CardButton/CardButton"
 import JournalItem from "./components/JournalItem/JournalItem"
 import LeftPanel from "./layouts/LeftPanel/LeftPanel"
 import Body from "./layouts/Body/Body"
 import Header from "./components/Header/Header"
 import JournalList from "./components/JournalList/JournalList"
+import JournalForm from "./components/JournalForm/JournalForm"
 import JornalAddButton from "./components/JournalAddButton/JournalAddButton"
 
 function App() {
-  const [inputData, setInputData] = useState('')
   const data = [
     {
       title: "Подготовка к обновлению курсов",
@@ -28,9 +27,7 @@ function App() {
       date: new Date()
     }
   ]
-  const inputChange = (e) => {
-    setInputData(e.target.value)
-  }
+
   return (
     <div className="app">
       <LeftPanel>
@@ -61,7 +58,7 @@ function App() {
         </JournalList>
       </LeftPanel>
       <Body>
-        <input type="text" value={inputData} onChange={inputChange} />
+        <JournalForm />
       </Body>
     </div>
   )
