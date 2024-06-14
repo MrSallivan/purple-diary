@@ -1,7 +1,6 @@
 import "./JournalForm.css"
 import { useState } from "react"
 import Button from "../Button/Button"
-import Button from "./../Button/Button"
 
 const JournalForm = () => {
   const [inputData, setInputData] = useState("")
