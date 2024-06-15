@@ -8,8 +8,9 @@ const JournalForm = () => {
     setInputData(e.target.value)
   }
   const addJournalItem = (e) => {
-    e.preventDefault
-    console.log(e)
+    e.preventDefault()
+    const formData = new FormData(e.target)
+    const formProps = Object.fromEntries(formData)
   }
   return (
     <form className="journal-form" onSubmit={addJournalItem}>
@@ -17,7 +18,13 @@ const JournalForm = () => {
       <input type="date" name="date" />
       <input type="text" name="tag" value={inputData} onChange={inputChange} />
       <textarea name="post" id="" cols="30" rows="10"></textarea>
-      <Button text="Сохранить" type="submit" />
+      <Button
+        text="Сохранить"
+        type="submit"
+        onClick={() => {
+          console.log("Нажали")
+        }}
+      />
     </form>
   )
 }
