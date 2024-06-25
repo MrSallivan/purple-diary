@@ -4,6 +4,7 @@ import Button from "../Button/Button"
 const JournalForm = ({ addItem }) => {
   const addJournalItem = (e) => {
     e.preventDefault()
+		console.log(e.target);
     const formData = new FormData(e.target)
     const formProps = Object.fromEntries(formData)
     addItem(formProps)
