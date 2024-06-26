@@ -9,24 +9,24 @@ import JornalAddButton from "./components/JournalAddButton/JournalAddButton"
 import { useState } from "react"
 
 const INITIAL_DATA = [
-  // {
-  //   id: 1,
-  //   title: "Подготовка к обновлению курсов",
-  //   text: "Горгые походы открывают удивительные природные ландшафты",
-  //   date: new Date()
-  // },
-  // {
-  //   id: 2,
-  //   title: "Поход в горы",
-  //   text: "Думал, чт оочень много времени",
-  //   date: new Date()
-  // },
-  // {
-  //   id: 3,
-  //   title: "Подготовка к экзаменам",
-  //   text: "Я молодец, я всё знаю. Сдам на пять!",
-  //   date: new Date()
-  // }
+  {
+    id: 1,
+    title: "Подготовка к обновлению курсов",
+    text: "Горгые походы открывают удивительные природные ландшафты",
+    date: new Date()
+  },
+  {
+    id: 2,
+    title: "Поход в горы",
+    text: "Думал, чт оочень много времени",
+    date: new Date()
+  },
+  {
+    id: 3,
+    title: "Подготовка к экзаменам",
+    text: "Я молодец, я всё знаю. Сдам на пять!",
+    date: new Date()
+  }
 ]
 function App() {
   const [items, setItems] = useState(INITIAL_DATA)
