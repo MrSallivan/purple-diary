@@ -40,7 +40,7 @@ const JournalForm = ({ addItem }) => {
   }
   return (
     <form className={styles["journal-form"]} onSubmit={addJournalItem}>
-      <div>
+      <div className={cn(styles["form-row"])}>
         <input
           type="text"
           name="title"
@@ -59,17 +59,25 @@ const JournalForm = ({ addItem }) => {
           type="date"
           name="date"
           id="date"
-          className={cn({ [styles.invalid]: !formValideState.date })}
+          className={cn(styles["input"], {
+            [styles.invalid]: !formValideState.date
+          })}
         />
       </div>
 
       <div className={cn(styles["form-row"])}>
-        <label htmlFor="ефпы" className={cn(styles["form-label"])}>
+        <label htmlFor="tags" className={cn(styles["form-label"])}>
           <img src="./folder.svg" alt="calendar icon" />
           <span>Тэги</span>
         </label>
-        <input type="text" name="tag" id="tags" />
+        <input
+          type="text"
+          name="tag"
+          id="tags"
+          className={cn(styles["input"])}
+        />
       </div>
+
       <textarea
         name="text"
         id=""

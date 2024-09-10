@@ -3,28 +3,37 @@
 	flex-direction: column;
 	gap: 30px;
 }
-.invalid {
-	border: 1px solid red;
-	background: rgb(68, 6, 6);
-}
 
 .input-title {
-	color: white;
 	border: none;
-	border-bottom: 1px solid #323232;
 	background: none;
 	font-size: 32px;
-	font-style: normal;
 	font-weight: 600;
+	font-style: normal;
 	line-height: normal;
 	font-family: "Source Sans 3", sans-serif;
+	border-bottom: 1px solid #323232;
+	border-radius: 0;
+	width: 100%;
 }
-
+input,
+textarea {
+	color: inherit;
+	border: none;
+	background: none;
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	line-height: normal;
+	font-family: "Source Sans 3", sans-serif;
+	border-bottom: 1px solid #323232;
+	width: 100%;
+}
 input {
 	height: 25px;
 }
 .form-label {
-	min-width: 100px;
+	min-width: 150px;
 	display: flex;
 	align-items: center;
 	gap: 20px;
@@ -33,4 +42,11 @@ input {
 	display: flex;
 	align-items: center;
 	gap: 50px;
+}
+::-webkit-calendar-picker-indicator {
+	filter: invert(1);
+}
+.invalid {
+	border: 1px solid red;
+	background: rgb(68, 6, 6);
 }
