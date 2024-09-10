@@ -3,18 +3,23 @@
 	flex-direction: column;
 	gap: 30px;
 }
-.journal-form input,
-textarea {
+.journal-form input {
 	border-radius: 3px;
 	border: none;
 	outline: none;
 	padding: 5px;
 }
-.journal-form input {
+
+.journal-form textarea {
+	border-radius: 3px;
+	border: none;
+	outline: none;
+	padding: 5px;
+}
+input {
 	height: 25px;
 }
-.journal-form input.invalid,
-.journal-form textarea.invalid {
+.invalid {
 	border: 1px solid red;
 	background-color: rgb(160, 81, 87);
 }
