@@ -11,10 +11,8 @@ const JournalForm = ({ addItem }) => {
 
   const addJournalItem = (e) => {
     e.preventDefault()
-    console.log(e.target)
     const formData = new FormData(e.target)
     const formProps = Object.fromEntries(formData)
-    console.log(formProps)
     let isFormValid = true
     if (!formProps.title?.trim().length) {
       setFormValidState((prev) => ({ ...prev, title: false }))
@@ -44,12 +42,12 @@ const JournalForm = ({ addItem }) => {
       <input
         type="text"
         name="title"
-        style={{ border: formValideState.title ? "none" : "1px solid red" }}
+        className={`journal-form ${formValideState.title ? "" : "invalid"}`}
       />
       <input
         type="date"
         name="date"
-        style={{ border: formValideState.date ? "none" : "1px solid red" }}
+        className={`journal-form ${formValideState.date ? "" : "invalid"}`}
       />
       <input type="text" name="tag" />
       <textarea
@@ -57,7 +55,7 @@ const JournalForm = ({ addItem }) => {
         id=""
         cols="30"
         rows="10"
-        style={{ border: formValideState.text ? "none" : "1px solid red" }}
+        className={`journal-form ${formValideState.title ? "" : "invalid"}`}
       ></textarea>
       <Button text="Сохранить" type="submit" />
     </form>
