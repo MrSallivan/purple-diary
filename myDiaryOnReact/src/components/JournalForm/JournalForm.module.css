@@ -3,18 +3,34 @@
 	flex-direction: column;
 	gap: 30px;
 }
-input,
-textarea {
-	border-radius: 3px;
+.invalid {
+	border: 1px solid red;
+	background: rgb(68, 6, 6);
+}
+
+.input-title {
+	color: white;
 	border: none;
-	outline: none; 
-	padding: 5px;
+	border-bottom: 1px solid #323232;
+	background: none;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	font-family: "Source Sans 3", sans-serif;
 }
 
 input {
 	height: 25px;
 }
-.invalid {
-	border: 1px solid red;
-	background-color: rgb(160, 81, 87);
+.form-label {
+	min-width: 100px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.form-row {
+	display: flex;
+	align-items: center;
+	gap: 50px;
 }
